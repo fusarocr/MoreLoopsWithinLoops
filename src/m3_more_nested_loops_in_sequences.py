@@ -168,6 +168,12 @@ def largest_negative_number(seq_seq):
     #   give sequence of sequences plus any non-list variables you want).
     # ------------------------------------------------------------------
 
+    seq = []
+    for k in range(len(seq_seq)):
+        for j in range(len(seq_seq[k])):
+            if seq_seq[k][j] < 0:
+               seq = seq + [[seq_seq[k][j]]]
+    return largest_number(seq)
 
 
 
