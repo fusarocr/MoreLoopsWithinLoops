@@ -123,7 +123,7 @@ def run_test_largest_negative_number():
 
     # Test 2:
     expected = None
-    answer = largest_negative_number([],[],[])
+    answer = largest_negative_number(([],[],[]))
     print('Expected and actual are:', expected, answer)
 
     # Test 3:
@@ -168,7 +168,8 @@ def largest_negative_number(seq_seq):
     #   give sequence of sequences plus any non-list variables you want).
     # ------------------------------------------------------------------
 
-    for 
+
+
 
 
 
@@ -403,7 +404,7 @@ def first_is_elsewhere_too(seq_seq):
     and the given argument is a sequence of sequences.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -418,6 +419,13 @@ def first_is_elsewhere_too(seq_seq):
     #   in this problem, as doing so would defeat the goal of providing
     #   practice at loops within loops (within loops within ...)
     # ------------------------------------------------------------------
+
+    for k in range(len(seq_seq[0])):
+        for j in range(1, len(seq_seq)):
+            for h in range(len(seq_seq[j])):
+                if seq_seq[0][k] == seq_seq[j][h]:
+                    return True
+    return False
 
 
 # ----------------------------------------------------------------------
